@@ -1,0 +1,15 @@
+{
+  "name": "tippyjs",
+  "homepage": "https://github.com/atomiks/tippyjs",
+  "version": "6.2.6",
+  "_release": "6.2.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.2.6",
+    "commit": "ea753de47a27418f317296020fe9807f3ad1b117"
+  },
+  "_source": "https://github.com/atomiks/tippyjs.git",
+  "_target": "^6.2.6",
+  "_originalSource": "tippyjs",
+  "_direct": true
+}

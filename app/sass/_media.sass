@@ -1,0 +1,667 @@
+@import "vars"
+
++media-breakpoint-up(md)
+	.catalog-slider
+		&_mobile
+			display: none !important
+
+//Extra large: ≥1600px
++media-breakpoint-down(xl)
+
+//Large: ≥1440px  max-width: 1599px
++media-breakpoint-down(lg)
+
+//Medium: ≥1200px max-width: 1439px
++media-breakpoint-down(md)
+	.h1
+		font-size: 47px
+		line-height: 1.25
+	.h2
+		font-size: 39px
+	.h3
+		&_extra
+			font-size: 28px
+	.h4
+		font-size: 24px
+	.button
+		i
+			width: 56px
+			height: 56px
+			&:before
+				width: 26px
+				height: 26px
+				background-size: cover
+				top: 15px
+				left: 15px
+		span
+			font-weight: 700
+			font-size: 18px
+	.nav
+		&-list
+			&__item
+				margin-right: 40px
+	.head
+		margin-bottom: 100px
+		&-subttl
+			font-size: 37px
+		&-ico
+			margin-bottom: 25px
+			&__img
+				max-width: 190px
+	.about
+		padding: 100px 0
+		&-ttl
+			margin-bottom: 25px
+		&-txt
+			max-width: 680px
+			margin-bottom: 50px
+		&-item
+			&__ico
+				margin-bottom: 25px
+	.catalog
+		padding: 100px 0
+		&-slider
+			&__item
+				p
+					max-width: 85%
+	.offer
+		padding: 100px 0
+	.coop
+		padding: 100px 0
+	.feedback
+		padding: 100px 0
+	.page
+		&-wrap
+			margin: 100px 0
+		&-subttl
+			font-size: 37px
+			margin-bottom: 50px
+	.calc
+		padding-bottom: 50px
+	.form
+		padding: 50px 0 100px
+	.map
+		height: 750px
+		margin-top: 100px
+	.reviews
+		&-wrap
+			margin-left: -220px
+		&-slider
+			&__item
+				padding: 50px 50px 75px
+	.line
+		&_1
+			height: 100px
+			top: -200px
+		&_2
+			top: -100px
+		&_3
+			height: calc(100% + 200px)
+			top: -100px
+		&_4
+			bottom: -100px
+		&_5
+			height: calc(100% + 200px)
+			top: -100px
+		&_6
+			bottom: -100px
+		&_7
+			height: calc(100% + 200px)
+			top: -100px
+		&_8
+			height: calc(100% + 200px)
+			top: -100px
+		&_9
+			bottom: -100px
+		&_10
+			height: 100px
+			bottom: -200px
+	@keyframes marker1
+		0%
+			top: -300px
+			opacity: 0
+		1%
+			opacity: 1
+		33%
+			opacity: 1
+			left: calc(70% - 32px)
+			top: -198px
+		50%
+			opacity: 1
+			top: -198px
+			left: -17px
+		75%
+			opacity: 1
+			left: -17px
+			top: calc(100% - 1px)
+		100%
+			opacity: 1
+			left: calc(100% - 53px)
+			top: calc(100% - 1px)
+
+	@keyframes marker2
+		1%
+			opacity: 1
+		50%
+			opacity: 1
+			left: calc(100% - 53px)
+			top: calc(100% - 1px)
+		100%
+			opacity: 1
+			left: -17px
+			top: calc(100% - 1px)
+
+	@keyframes marker3
+		1%
+			opacity: 1
+		100%
+			opacity: 1
+			left: -17px
+			top: calc(100% - 1px)
+
+	@keyframes marker4
+		1%
+			opacity: 1
+		40%
+			opacity: 1
+			left: -17px
+			top: calc(100% - 1px)
+		80%
+			opacity: 1
+			top: calc(100% - 1px)
+			left: calc(70% - 32px)
+		99%
+			opacity: 1
+			left: calc(70% - 32px)
+			top: calc(100% + 150px)
+		100%
+			opacity: 0
+			left: calc(70% - 32px)
+			top: calc(100% + 250px)
+
+//Small: ≥1024px max-width: 1199px
++media-breakpoint-down(sm)
+	.h2
+		font-size: 39px
+	.nav
+		&-ico
+			float: right
+	.menu
+		visibility: hidden
+		opacity: 0
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10
+		width: 100%
+		height: 100vh
+		padding: 60px 0
+		background-color: #000
+		transition: all ease .3s
+		&.show
+			visibility: visible
+			opacity: 1
+			transition: all ease .3s
+		&-close
+			padding: 0
+			float: right
+		&-list
+			margin: 25px 0 50px
+			padding-bottom: 75px
+			position: relative
+			&:after
+				content: ''
+				width: 100%
+				height: 3px
+				background-color: #fff
+				position: absolute
+				bottom: 0
+				left: 0
+			&__item
+				color: #fff
+				margin-bottom: 60px
+				&:last-child
+					margin-bottom: 0
+		&-txt
+			color: #fff
+			margin-bottom: 25px
+		&-phone
+			color: #fff
+	.about
+		&-item
+			margin-bottom: 50px
+		.col-sm-6
+			&:last-child
+				.about-item
+					margin-bottom: 0
+	.catalog
+		&-slider
+			&_mobile
+				margin-top: 50px
+			p
+				display: none
+			.slick-dots
+				display: flex
+				flex-direction: row
+				justify-content: center
+				li
+					font-size: 0
+					width: 15px
+					height: 15px
+					border: 3px solid #000
+					border-radius: 50% 50%
+					margin-right: 15px
+					&:last-child
+						margin-right: 0
+					&.slick-active
+						background-color: #000
+	.coop
+		&-item
+			margin-bottom: 50px
+		.col-md-3:last-child
+			.coop-item
+				margin-bottom: 0
+	.reviews
+		&-wrap
+			width: auto
+			position: static
+			margin: 0 auto
+			padding: 100px 0
+		&-slider
+			margin-top: 0
+	.calc
+		&-item
+			margin-bottom: 0
+			&:before
+				width: 100%
+			&:after
+				width: 100%
+	.radio
+		&_sm
+			display: block
+			margin-bottom: 50px !important
+	.map
+		height: auto
+	.line
+		&_1
+			width: 3px
+		&_2
+			width: calc(70% - 12px)
+			height: 3px
+		&_3
+			width: 3px
+		&_4
+			height: 3px
+		&_5
+			width: 3px
+		&_6
+			height: 3px
+		&_7
+			width: 3px
+		&_8
+			width: 3px
+		&_9
+			width: calc(70% - 12px)
+			height: 3px
+		&_10
+			width: 3px
+
+//Extra small: ≥768px max-width: 1023px
++media-breakpoint-down(xs)
+	.menu
+		&-list
+			margin: 50px 0
+			padding-bottom: 75px
+			&__item
+				margin-bottom: 75px
+	.head
+		margin-bottom: 75px
+		&-ico
+			&__img
+				width: 145px
+	.about
+		padding: 75px 0
+		&-item
+			&__ico
+				margin: 0 auto 25px
+	.catalog
+		padding: 75px 0
+		&-ttl
+			margin-bottom: 50px
+		&-item
+			&.active
+				.catalog-item__txt
+					margin-top: 25px
+				.catalog-item__ttl
+					font-weight: 800
+					font-size: 18px
+			&__ttl
+				font-weight: 400
+				font-size: 18px
+		&-slider
+			&_mobile
+				margin-top: 25px
+	.offer
+		padding: 75px 0
+		&-ttl
+			margin-bottom: 50px
+	.coop
+		padding: 75px 0
+		&-ttl
+			margin-bottom: 50px
+	.feedback
+		padding: 75px 0
+		&-form
+			.rline
+				max-width: 420px
+				margin: 0 auto 50px
+			&__input
+				padding-bottom: 15px
+	.foot
+		&-nav
+			margin-bottom: 100px
+	.page
+		&-wrap
+			margin: 75px 0
+	.radio
+		margin-bottom: 50px
+	.form
+		padding: 75px 0
+		&-form
+			.rline
+				max-width: 420px
+				margin: 0 auto 50px
+			&__input
+				padding-bottom: 15px
+	.map
+		margin-top: 75px
+	.line
+		&_1
+			height: 75px
+			top: -150px
+		&_2
+			top: -75px
+		&_3
+			height: calc(100% + 150px)
+			top: -75px
+		&_4
+			bottom: -75px
+		&_5
+			height: calc(100% + 150px)
+			top: -75px
+		&_6
+			bottom: -75px
+		&_7
+			height: calc(100% + 150px)
+			top: -75px
+		&_8
+			height: calc(100% + 150px)
+			top: -75px
+		&_9
+			bottom: -75px
+		&_10
+			height: 75px
+			bottom: -150px
+	.line
+		&-marker
+			width: 30px
+			height: 44px
+			background-size: cover
+	.about.animated
+		.line-marker
+			animation-duration: 7.5s
+	@keyframes marker1
+		0%
+			top: -300px
+			left: calc(70% - 14px)
+			opacity: 0
+		1%
+			opacity: 1
+		33%
+			opacity: 1
+			left: calc(70% - 14px)
+			top: -118px
+		50%
+			opacity: 1
+			top: -118px
+			left: 2px
+		75%
+			opacity: 1
+			left: 2px
+			top: calc(100% + 30px)
+		100%
+			opacity: 1
+			left: calc(100% - 32px)
+			top: calc(100% + 30px)
+	.catalog.animated
+		.line-marker
+			animation-duration: 7.5s
+	@keyframes marker2
+		0%
+			left: calc(100% - 32px)
+			top: -118px
+		1%
+			opacity: 1
+		50%
+			opacity: 1
+			left: calc(100% - 32px)
+			top: calc(100% + 30px)
+		100%
+			opacity: 1
+			left: 2px
+			top: calc(100% + 30px)
+	.offer.animated
+		.line-marker
+			animation-duration: 5.5s
+	@keyframes marker3
+		0%
+			left: 2px
+			top: -118px
+		1%
+			opacity: 1
+		100%
+			opacity: 1
+			left: 2px
+			top: calc(100% + 31px)
+	.coop.animated
+		.line-marker
+			animation-duration: 5.5s
+	@keyframes marker4
+		0%
+			left: 2px
+			top: -118px
+		1%
+			opacity: 1
+		40%
+			opacity: 1
+			left: 2px
+			top: calc(100% + 30px)
+		80%
+			opacity: 1
+			top: calc(100%  + 30px)
+			left: calc(70% - 14px)
+		99%
+			opacity: 1
+			left: calc(70% - 14px)
+			top: calc(100% + 50px)
+		100%
+			opacity: 0
+			left: calc(70% - 14px)
+			top: calc(100% + 150px)
+
+
+//Extra small: >0 max-width: 767px
++media-breakpoint-down(xxs)
+	.h1
+		font-size: 22px
+	.h2
+		font-size: 24px
+	.h3
+		font-size: 18px
+	.text
+		font-size: 16px
+	.nav
+		padding: 30px 0
+		&-logo
+			max-width: 60px
+		&-ico
+			max-width: 30px
+	.menu
+		&-list
+			margin: 25px 0 50px
+			padding-bottom: 75px
+			&__item
+				margin-bottom: 50px
+		&-close
+			width: 26px
+	.head
+		&-wrap
+			margin: 25px 0
+		&-subttl
+			font-size: 17px
+		&-ico
+			&__img
+				width: 100px
+				height: 100px
+	.about
+		&-txt
+			font-size: 16px
+		&-item
+			&__ttl
+				font-weight: 800
+				font-size: 18px
+	.offer
+		&-item
+			padding-top: 25px
+			margin-bottom: 25px
+			&:before, &:last-child:after
+				width: 100%
+			&__ttl
+				margin-bottom: 15px
+			&__subttl
+				margin-bottom: 25px
+	.foot
+		&-soc
+			justify-content: space-around
+			&__link
+				margin-right: 0
+		&-last
+			float: none
+	.page
+		&-wrap
+			margin: 25px 0
+		&-subttl
+			font-size: 17px
+	.reviews
+		&-slider
+			&__item
+				padding: 20px
+				padding-bottom: 70px
+			.slick-arrow
+				&.slick-next
+					right: 20px
+				&.slick-prev
+					right: inherit
+					left: 20px
+		&-item
+			&__txt
+				font-weight: 400
+				font-size: 16px
+	.map
+		.container
+			max-width: 350px
+	.line
+		&_2
+			width: calc(70% + 28px)
+			left: -25px
+		&_3
+			left: -25px
+		&_4
+			width: calc(100% + 50px)
+			left: -25px
+		&_5
+			right: -25px
+		&_6
+			width: calc(100% + 50px)
+			left: -25px
+		&_7
+			left: -25px
+		&_8
+			left: -25px
+		&_9
+			left: -25px
+			width: calc(70% + 28px)
+	@keyframes marker1
+		0%
+			top: -300px
+			left: calc(70% - 14px)
+			opacity: 0
+		1%
+			opacity: 1
+		33%
+			opacity: 1
+			left: calc(70% - 14px)
+			top: -118px
+		50%
+			opacity: 1
+			top: -118px
+			left: -38px
+		75%
+			opacity: 1
+			left: -38px
+			top: calc(100% + 30px)
+		100%
+			opacity: 1
+			left: calc(100% + 7px)
+			top: calc(100% + 30px)
+	.catalog.animated
+		.line-marker
+			animation-duration: 4.5s
+	@keyframes marker2
+		0%
+			left: calc(100% + 7px)
+			top: -43px
+		1%
+			opacity: 1
+		50%
+			opacity: 1
+			left: calc(100% + 7px)
+			top: calc(100% + 31px)
+		100%
+			opacity: 1
+			left: -38px
+			top: calc(100% + 31px)
+	@keyframes marker3
+		0%
+			top: -43px
+			left: -38px
+		1%
+			opacity: 1
+		100%
+			opacity: 1
+			left: -38px
+			top: calc(100% + 31px)
+	@keyframes marker4
+		0%
+			left: -38px
+			top: -43px
+		1%
+			opacity: 1
+		40%
+			opacity: 1
+			left: -38px
+			top: calc(100% + 31px)
+		80%
+			opacity: 1
+			top: calc(100%  + 31px)
+			left: calc(70% - 15px)
+		99%
+			opacity: 1
+			left: calc(70% - 15px)
+			top: calc(100% + 100px)
+		100%
+			opacity: 0
+			left: calc(70% - 15px)
+			top: calc(100% + 100px)
+
+
